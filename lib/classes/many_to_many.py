@@ -45,11 +45,9 @@ class Article:
             self._magazine = new_magazine
         else:
             TypeError("Magazine must be an instance of Magazine")
-    #pass.
 
 class Author:
     def __init__(self, name):
-        # validate name once at init
         if not isinstance(name, str):
             raise TypeError("Name must be a string")
         if len(name) == 0:
@@ -62,7 +60,6 @@ class Author:
 
     @name.setter
     def name(self, new_name):
-        # disallow reassignment
         raise AttributeError("Author name cannot be changed")
 
     def articles(self):
